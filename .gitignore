@@ -19,3 +19,5 @@ CVS
 css/
 _site
 node_modules/
+.sass-cache/
+css/styles.css

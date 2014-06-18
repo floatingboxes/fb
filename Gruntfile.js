@@ -1,6 +1,5 @@
 module.exports = function(grunt) {
 
-  // 1. All configuration goes here
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
@@ -13,15 +12,38 @@ module.exports = function(grunt) {
           dest: 'img/build/'
         }]
       }
+    },
+
+    sass: {
+      dist: {
+        options: {
+            style: 'compressed'
+        },
+        files: {
+            'css/styles.css': 'css/styles.sass'
+        }
+      }
+    },
+
+    watch: {
+      options: {
+        livereload: true
+      },
+      css: {
+        files: ['css/*.sass'],
+        tasks: ['sass'],
+        options: {
+          spawn: false,
+        }
+      }
     }
 
   });
 
-  // 3. Where we tell Grunt we plan to use this plug-in.
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
-
-  // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-  grunt.registerTask('default', ['imagemin']);
+  grunt.registerTask('default', ['imagemin', 'sass', 'watch']);
 
 };
