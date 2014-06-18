@@ -25,6 +25,12 @@ module.exports = function(grunt) {
       }
     },
 
+    jekyll: {
+      dist: {
+        serve: true
+      }
+    },
+
     watch: {
       options: {
         livereload: true
@@ -32,6 +38,13 @@ module.exports = function(grunt) {
       css: {
         files: ['css/*.sass'],
         tasks: ['sass'],
+        options: {
+          spawn: false,
+        }
+      },
+      jekyll: {
+        files: ['./*'],
+        tasks: ['jekyll'],
         options: {
           spawn: false,
         }
@@ -43,7 +56,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-jekyll');
 
-  grunt.registerTask('default', ['imagemin', 'sass', 'watch']);
+  grunt.registerTask('default', ['imagemin', 'sass', 'jekyll', 'watch']);
 
 };

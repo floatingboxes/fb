@@ -5,6 +5,7 @@
     "grunt": "~0.4.5",
     "grunt-contrib-imagemin": "~0.7.1",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-sass": "~0.7.3"
+    "grunt-contrib-sass": "~0.7.3",
+    "grunt-jekyll": "~0.4.2"
   }
 }
