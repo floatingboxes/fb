@@ -26,15 +26,19 @@ module.exports = function(grunt) {
     },
 
     jekyll: {
-      dist: {
-        serve: true
+      server: {
+          options: {
+            serve: true,
+            port: 4000,
+            auto: true
+          }
+      },
+      dev: {
+
       }
     },
 
     watch: {
-      options: {
-        livereload: true
-      },
       css: {
         files: ['css/*.sass'],
         tasks: ['sass'],
@@ -43,8 +47,8 @@ module.exports = function(grunt) {
         }
       },
       jekyll: {
-        files: ['./*'],
-        tasks: ['jekyll'],
+        files: ['./**/*.html', './**/*.css'],
+        tasks: ['jekyll:dev'],
         options: {
           spawn: false,
         }
@@ -58,6 +62,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-jekyll');
 
-  grunt.registerTask('default', ['imagemin', 'sass', 'jekyll', 'watch']);
+
+  grunt.registerTask('serve', ['jekyll:server']);
+  grunt.registerTask('dev', ['sass', 'jekyll:dev', 'watch']);
 
 };
