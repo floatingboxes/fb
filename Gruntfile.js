@@ -89,6 +89,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-autoprefixer');
 
   grunt.registerTask('dev', ['sass', 'autoprefixer', 'concurrent:dev']);
-  grunt.registerTask('prod', ['sass', 'jekyll:prod']);
+  grunt.registerTask('prod', ['sass', 'autoprefixer', 'jekyll:prod']);
 
 };
