@@ -67,7 +67,10 @@ module.exports = function(grunt) {
     },
     concurrent: {
       dev: {
-        tasks: ['watch', 'jekyll:server']
+        tasks: ['watch', 'jekyll:server'],
+        options: {
+          logConcurrentOutput: true
+        }
       }
     }
 
