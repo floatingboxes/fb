@@ -64,6 +64,11 @@ module.exports = function(grunt) {
           spawn: false,
         }
       }
+    },
+    concurrent: {
+      dev: {
+        tasks: ['watch', 'jekyll:server']
+      }
     }
 
   });
@@ -72,10 +77,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-jekyll');
+  grunt.loadNpmTasks('grunt-concurrent');
 
 
-  grunt.registerTask('serve', ['jekyll:server']);
-  grunt.registerTask('dev', ['sass', 'jekyll:dev', 'watch']);
+  grunt.registerTask('dev', ['sass', 'concurrent:dev']);
   grunt.registerTask('prod', ['sass', 'jekyll:prod']);
 
 };
