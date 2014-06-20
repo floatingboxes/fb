@@ -17,7 +17,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-            style: 'compressed'
+            // style: 'compressed'
         },
         files: {
             './src/css/styles.css': './src/css/styles.sass'
@@ -52,7 +52,7 @@ module.exports = function(grunt) {
     watch: {
       css: {
         files: ['./src/css/*.sass'],
-        tasks: ['sass'],
+        tasks: ['sass', 'autoprefixer'],
         options: {
           spawn: false,
         }
@@ -72,6 +72,11 @@ module.exports = function(grunt) {
           logConcurrentOutput: true
         }
       }
+    },
+    autoprefixer: {
+      target: {
+        src: './src/css/*.css'
+      }
     }
 
   });
@@ -81,9 +86,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-concurrent');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
-
-  grunt.registerTask('dev', ['sass', 'concurrent:dev']);
+  grunt.registerTask('dev', ['sass', 'autoprefixer', 'concurrent:dev']);
   grunt.registerTask('prod', ['sass', 'jekyll:prod']);
 
 };
