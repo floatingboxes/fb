@@ -16,7 +16,6 @@ xcuserdata
 # svn & cvs
 .svn
 CVS
-css/
 node_modules/
 .sass-cache/
 src/css/styles.css
