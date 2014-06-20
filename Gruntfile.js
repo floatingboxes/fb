@@ -20,7 +20,7 @@ module.exports = function(grunt) {
             style: 'compressed'
         },
         files: {
-            'css/styles.css': 'css/styles.sass'
+            './src/css/styles.css': './src/css/styles.sass'
         }
       }
     },
@@ -28,26 +28,37 @@ module.exports = function(grunt) {
     jekyll: {
       server: {
           options: {
+            src: './src',
+            dest: './build/dev',
             serve: true,
             port: 4000,
             auto: true
           }
       },
       dev: {
-
+        options: {
+          src: './src',
+          dest: './build/dev'
+        }
+      },
+      prod: {
+        options: {
+          src: './src',
+          dest: './build/prod'
+        }
       }
     },
 
     watch: {
       css: {
-        files: ['css/*.sass'],
+        files: ['./src/css/*.sass'],
         tasks: ['sass'],
         options: {
           spawn: false,
         }
       },
       jekyll: {
-        files: ['./**/*.html', './**/*.css'],
+        files: ['./src/**/*.html', './src/**/*.css'],
         tasks: ['jekyll:dev'],
         options: {
           spawn: false,
@@ -65,5 +76,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('serve', ['jekyll:server']);
   grunt.registerTask('dev', ['sass', 'jekyll:dev', 'watch']);
+  grunt.registerTask('prod', ['sass', 'jekyll:prod']);
 
 };

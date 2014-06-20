@@ -1,1 +1,1 @@
-exclude: ['css/styles.sass', Gemfile, Gemfile.lock, README.md, node_modules, package.json, Gruntfile.js]
+exclude: ['src/css/styles.sass', Gemfile, Gemfile.lock, README.md, node_modules, package.json, Gruntfile.js]
