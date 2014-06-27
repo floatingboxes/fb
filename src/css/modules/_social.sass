@@ -1,0 +1,34 @@
+.social
+  margin: 0
+  padding: 0
+  list-style: none
+  text-align: center
+
+  &__link
+    display: inline-block
+    padding: 1em
+
+    a
+      display: block
+      width: 3em
+      height: 3em
+
+    a svg path
+      transition: fill 0.2s ease-in-out
+      fill: $light-gray
+
+
+  &__codepen:hover svg path
+    fill: $dark-blue
+
+  &__github:hover svg path
+    fill: $orange
+
+  &__twitter:hover svg path
+    fill: $twitter-blue
+
+  &__instagram:hover svg path
+    fill: $green
+
+  &__contact:hover svg path
+    fill: $dark-blue
