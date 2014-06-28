@@ -1,0 +1,60 @@
+// Some Settings
+$tooltip-text-color: #FFFFFF
+$tooltip-color: #444444
+
+// The Business
+[data-tooltip]
+  position: relative
+  +sans
+
+
+  &:before,
+  &:after
+    font-size: 14px
+    line-height: 1
+    content: none
+    content: normal
+
+  &:hover,
+  &:active,
+  &:focus
+
+    &:before,
+    &:after
+      //animation: 0.2s tooltip linear
+
+    &:before
+      content: ""
+
+    &:after
+      content: attr(data-tooltip)
+
+  // triangle
+  &:before
+    position: absolute
+    top: -1px // weird
+    left: 50%
+    margin-top:  -0.5em
+    margin-left: -0.5em
+    border: 0.5em solid transparent
+    border-top-color: $tooltip-color
+
+  &:after
+    position: absolute
+    top: -2.5em
+    left: 50%
+    border-radius: 0.25em
+    padding: 0.5em 1em
+    white-space: nowrap
+    color: $tooltip-text-color
+    background-color: $tooltip-color
+    z-index: 1
+    text-transform: uppercase
+    transform: translateX(-50%)
+    letter-spacing: 0.125em
+
+@keyframes tooltip
+  from
+    opacity: 0
+  to
+    opacity: 1

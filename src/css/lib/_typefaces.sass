@@ -1,4 +1,4 @@
-@mixin tisa($style:"normal",$weight:"400")
+@mixin tisa($style:"normal",$weight:"regular")
   font-family: "ff-tisa-web-pro",serif
 
   @if $weight=="regular"
@@ -16,3 +16,8 @@
   @else
     font-style: normal
     @warn "Hey Dorkus! #{$style} is not a supported style for mixin `tisa`"
+
+@mixin sans
+  font-family: "brandon-grotesque", sans-serif
+  font-style: normal
+  font-weight: 300
