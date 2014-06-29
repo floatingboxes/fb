@@ -44,7 +44,7 @@ module.exports = function(grunt) {
       prod: {
         options: {
           src: './src',
-          dest: './build/prod'
+          dest: '../fb-prod'
         }
       }
     },
