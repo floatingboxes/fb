@@ -1,0 +1,28 @@
+$form-border-color: #CCCCCC
+
+.form
+  +sans
+
+  label
+    display: block
+    border: 1px solid transparent
+    padding: 0.25em 0.5em
+
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  textarea
+    border: 1px solid $form-border-color
+    border-radius: 0.25em
+    margin: 0
+    padding: 0.5em 1em
+    outline: 0
+    background: #FFFFFF
+    width: 100%
+
+  textarea
+    height: 10em
+    resize: none
+
+  .form__group
+    margin-bottom: 0.5em
