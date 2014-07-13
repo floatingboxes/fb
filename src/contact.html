@@ -6,7 +6,7 @@ title: Contact Dan Sweeney
 <h1>What Can I Do For You?</h1>
 
 <div class="contact-form">
-  <form action="//forms.brace.io/dan@floatingoxes.com" class="form">
+  <form action="//forms.brace.io/dan@floatingoxes.com" method="post" class="form">
     <div class="form__group">
       <label for="name">Name</label>
       <input type="text" name="name" required>
@@ -19,6 +19,7 @@ title: Contact Dan Sweeney
       <label for="comment">Comment</label>
       <textarea name="comment" required></textarea>
     </div>
+    <input type="hidden" name="_next" value="//floatingboxes.com/?thanks" />
     <input type="submit" value="Send to Dan">
   </form>
 </div>
