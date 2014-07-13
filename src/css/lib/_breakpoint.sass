@@ -1,0 +1,38 @@
+$mq-mobile-portrait: rem(320) !default
+$mq-mobile-landscape: rem(480) !default
+$mq-tablet-portrait: rem(768) !default
+$mq-tablet-landscape: rem(1024) !default
+$mq-desktop: rem(1200)
+
+
+@mixin bp($breakpoint)
+
+  @if $breakpoint=="tablet"
+    @media only screen and (min-width: $mq-tablet-portrait)
+      @content
+
+  @else if $breakpoint=="tablet-landscape"
+    @media only screen and (min-width: $mq-tablet-landscape)
+      @content
+
+  @else if $breakpoint=="desktop"
+    @media only screen and (min-width: $mq-desktop)
+      @content
+
+  @else if type-of($breakpoint)=="number"
+    @media only screen and (min-width: $breakpoint)
+      @content
+
+  @else
+    @warn "Hey Nimrod! #{$breakpoint} is not a supported option for mixin `bp`"
+    @content
+
+
+@mixin bpv($breakpoint)
+
+  @if $breakpoint=="chromebook"
+    @media only screen and (max-height: rem(700))
+
+  @else if type-of($breakpoint)=="number"
+    @media only screen and (min-height : $breakpoint)
+      @content
