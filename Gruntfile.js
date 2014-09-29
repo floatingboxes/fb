@@ -3,38 +3,78 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    imagemin: {
-      dynamic: {
-        files: [{
-          expand: true,
-          cwd: 'img/',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: 'img/build/'
-        }]
+    // Vendor Prefix CSS
+    // =====================================
+    autoprefixer: {
+      target: {
+        src: './src/css/*.css'
       }
     },
 
-    sass: {
-      dist: {
+
+    // Deletes build folder
+    // =====================================
+    clean: {
+      dev: {
+        src: [ './build/dev' ]
+      },
+      prod: {
+        src: [ './build/prod']
+      }
+    },
+
+
+    // Run watch and webserver at same time
+    // =====================================
+    concurrent: {
+      dev: {
+        tasks: ['watch', 'connect'],
         options: {
-            // style: 'compressed'
-        },
-        files: {
-            './src/css/styles.css': './src/css/styles.sass'
+          logConcurrentOutput: true
         }
       }
     },
 
-    jekyll: {
-      server: {
-          options: {
-            src: './src',
-            dest: './build/dev',
-            serve: true,
-            port: 4000,
-            auto: true
-          }
+
+    // Development webserver
+    // =====================================
+    connect: {
+      dev: {
+        options: {
+          port: 4000,
+          base: './build/dev',
+          keepalive: true
+        }
+      }
+    },
+
+
+    // Copy Sass File to Build w/o Jekyll
+    // =====================================
+    copy: {
+      css: {
+        src: './src/css/styles.css',
+        dest: './build/dev/css/styles.css',
       },
+    },
+
+
+    // Git deploy to gh-pages
+    // =====================================
+    git_deploy: {
+      prod: {
+        options: {
+          branch: 'gh-pages',
+          url: 'https://github.com/floatingboxes/fb.git'
+        },
+        src: './build/prod'
+      },
+    },
+
+
+    // Build Site w/ Jekyll
+    // =====================================
+    jekyll: {
       dev: {
         options: {
           src: './src',
@@ -44,51 +84,62 @@ module.exports = function(grunt) {
       prod: {
         options: {
           src: './src',
-          dest: '../fb-prod'
+          dest: './build/prod'
         }
       }
     },
 
+
+    // Build Sass Files
+    // =====================================
+    sass: {
+      dev: {
+        files: {
+            './src/css/styles.css': './src/css/styles.sass'
+        }
+      },
+      prod: {
+        options: {
+            style: 'compressed'
+        },
+        files: {
+            './src/css/styles.css': './src/css/styles.sass'
+        }
+      }
+    },
+
+
+    // Keep an eye out for changes
+    // =====================================
     watch: {
       css: {
-        files: ['./src/css/**/*.sass'],
-        tasks: ['sass', 'autoprefixer'],
+        files: ['./src/css/**/*.s*ss'],
+        tasks: ['sass', 'autoprefixer', 'copy'],
         options: {
           spawn: false,
         }
       },
       jekyll: {
-        files: ['./src/**/*.html', './src/**/*.css'],
+        files: ['./src/**/*.html', './src/**/*.md', './src/**/*.js', './src/**/*.yml'],
         tasks: ['jekyll:dev'],
         options: {
           spawn: false,
         }
       }
-    },
-    concurrent: {
-      dev: {
-        tasks: ['watch', 'jekyll:server'],
-        options: {
-          logConcurrentOutput: true
-        }
-      }
-    },
-    autoprefixer: {
-      target: {
-        src: './src/css/*.css'
-      }
     }
-
   });
 
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-jekyll');
-  grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-concurrent');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-git-deploy');
+  grunt.loadNpmTasks('grunt-jekyll');
 
-  grunt.registerTask('dev', ['sass', 'autoprefixer', 'concurrent:dev']);
-  grunt.registerTask('prod', ['sass', 'autoprefixer', 'jekyll:prod']);
+  grunt.registerTask('dev', ['clean:dev', 'sass:dev', 'autoprefixer', 'jekyll:dev', 'concurrent:dev']);
+  grunt.registerTask('prod', ['clean:prod', 'sass:prod', 'autoprefixer', 'jekyll:prod', 'git_deploy:prod']);
 
 };
