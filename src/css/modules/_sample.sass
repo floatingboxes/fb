@@ -1,0 +1,95 @@
+// Basic styles
+.sample
+  +cf
+  +center(1400px)
+
+.sample__image,
+.sample__video,
+.sample__info
+  margin-bottom: 2em
+
+  img
+    display: block
+
+.sample__video-embed
+  position: relative
+  padding-top: 75%
+  background: green
+
+  iframe
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+
+
+// Image left, text right
+.sample--basic
+  @extend .sample
+
+  .sample__image
+
+    +bp(1000px)
+      float: left
+      max-width: pct(800,1200)
+      margin-right: 2em
+      margin-bottom: 0
+
+  .sample__video
+
+    +bp(1000px)
+      float: left
+      width: pct(800,1200)
+      margin-right: 2em
+      margin-bottom: 0
+
+
+// Image right, text left
+.sample--alt
+  @extend .sample
+
+  .sample__image
+
+    +bp(1000px)
+      float: right
+      max-width: pct(800,1200)
+      margin-left: 2em
+      margin-bottom: 0
+
+  .sample__video
+
+    +bp(1000px)
+      float: right
+      width: pct(800,1200)
+      margin-left: 2em
+      margin-bottom: 0
+
+
+// Wide image, text under
+.sample--wide
+  @extend .sample
+  text-align: center
+
+  .sample__info
+    max-width: 600px
+    margin: auto
+
+// Four Up
+.sample--fourup
+  @extend .sample
+
+  +bp(800px)
+
+    > div
+      width: pct(684, 1400)
+      margin-right: pct(32,1400)
+      float: left
+
+      &:nth-child(2n)
+        margin-right: 0
+
+      &:nth-child(3),
+      &:nth-child(4)
+        margin-bottom: 0
