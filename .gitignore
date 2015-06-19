@@ -20,3 +20,4 @@ node_modules/
 .sass-cache/
 src/css/styles.css
 Gemfile.lock
+src/css/styles.css.map
