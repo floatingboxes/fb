@@ -2,7 +2,7 @@
 layout: book
 published: true
 title: The Amateurs
-date: 2015-06-19 00:00:00
+date: 2015-03-19 00:00:00
 author: Conor Stechshulte
 isbn-10: 1606997343
 isbn-13: 978-1606997345
