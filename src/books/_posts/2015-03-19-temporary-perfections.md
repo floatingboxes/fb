@@ -1,0 +1,12 @@
+---
+layout: book
+published: true
+title: Temporary Perfections
+date: 2015-03-19
+author: Gianrico Carofiglio
+isbn-10: 0847836304
+isbn-13: 978-0847836307
+url: http://www.amazon.com/Temporary-Perfections-Guido-Guerrieri-Novels/dp/0847836304/ref=tmm_hrd_swatch_0?_encoding=UTF8&sr=1-1&qid=1434745404
+rating: 4
+---
+
