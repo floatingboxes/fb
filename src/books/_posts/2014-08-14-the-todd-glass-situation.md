@@ -2,7 +2,7 @@
 layout: book
 published: true
 title: The Todd Glass Situation
-date: 2014-08-14
+date: 2014-08-14 00:00:00
 author: Todd Glass
 isbn-10: 1476714460
 isbn-13: 978-1476714462

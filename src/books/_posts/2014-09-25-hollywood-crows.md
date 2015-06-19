@@ -2,7 +2,7 @@
 layout: book
 published: true
 title: Hollywood Crows
-date: 2014-09-25
+date: 2014-09-25 00:00:00
 author: Joseph Wambaugh 
 isbn-10: 044650582X
 isbn-13: 978-0446505826

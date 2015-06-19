@@ -2,7 +2,7 @@
 layout: book
 published: true
 title: A Walk in the Dark
-date: 2014-01-16
+date: 2014-01-16 00:00:00
 author: Gianrico Carofiglio
 isbn-10: 1904738532
 isbn-13: 978-1904738534

@@ -2,7 +2,7 @@
 layout: book
 published: true
 title: Reasonable Doubts
-date: 2014-10-30
+date: 2014-10-30 00:00:00
 author: Gianrico Carofiglio
 isbn-10: 1904738540
 isbn-13: 978-1904738541

@@ -2,7 +2,7 @@
 layout: book
 published: true
 title: Ex Machina
-date: 2014-04-17
+date: 2014-04-17 00:00:00
 author: Brian K. Vaughan
 illustrator: Tony Harris
 isbn-10: 1401206123

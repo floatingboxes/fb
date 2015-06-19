@@ -2,7 +2,7 @@
 layout: book
 published: true
 title: The Keeper of Lost Causes
-date: 2014-02-14
+date: 2014-02-14 00:00:00
 author: Jussi Adler-Olsen
 isbn-10: 0452297907
 isbn-13: 978-0452297906

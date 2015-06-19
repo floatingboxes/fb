@@ -2,7 +2,7 @@
 layout: book
 published: true
 title: Cliff Walk
-date: 2015-01-08
+date: 2015-01-08 00:00:00
 author: Bruce DeSilva
 isbn-10: 0765335336
 isbn-13: 978-0765335333

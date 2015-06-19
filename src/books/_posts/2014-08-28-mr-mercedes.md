@@ -2,7 +2,7 @@
 layout: book
 published: true
 title: Mr. Mercedes
-date: 2014-08-28
+date: 2014-08-28 00:00:00
 author: Stephen King
 isbn-10: 1476754470
 isbn-13: 978-1476754475

@@ -2,7 +2,7 @@
 layout: book
 published: true
 title: The Sculptor
-date: 2015-06-18
+date: 2015-06-18 00:00:00
 author: Scott McCloud
 isbn-10: 1596435739
 isbn-13: 978-1596435735

@@ -2,7 +2,7 @@
 layout: book
 published: true
 title: The Burning Room
-date: 2014-12-25
+date: 2014-12-25 00:00:00
 author: Michael Connelly
 isbn-10: 1455524190
 isbn-13: 978-1455524198

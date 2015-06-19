@@ -2,7 +2,7 @@
 layout: book
 published: true
 title: Just Enough Research
-date: 2014-002-27
+date: 2014-02-27 00:00:00
 author: Erika Hall
 isbn-10: 1937557103
 isbn-13: 978-1937557102

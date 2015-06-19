@@ -2,7 +2,7 @@
 layout: book
 published: true
 title: Rogue Island
-date: 2014-10-16
+date: 2014-10-16 00:00:00
 author: Bruce DeSilva 
 isbn-10: 0765329816
 isbn-13: 978-0765329813

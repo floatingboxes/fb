@@ -2,7 +2,7 @@
 layout: book
 published: true
 title: The Onion Field
-date: 2015-02-05
+date: 2015-02-05 00:00:00
 author: Joseph Wambaugh 
 isbn-10: 0385341598
 isbn-13: 978-0385341592

@@ -2,7 +2,7 @@
 layout: book
 published: true
 title: Temporary Perfections
-date: 2015-03-19
+date: 2015-03-19 00:00:00
 author: Gianrico Carofiglio
 isbn-10: 0847836304
 isbn-13: 978-0847836307

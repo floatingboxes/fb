@@ -2,7 +2,7 @@
 layout: book
 published: true
 title: The Harlem Hellfighters
-date: 2014-06-26
+date: 2014-06-26 00:00:00
 author: Max Brooks
 illustrator: Caanan White
 isbn-10: 0307464970

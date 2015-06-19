@@ -2,7 +2,7 @@
 layout: book
 published: true
 title: Hollywood Moon
-date: 2014-12-11
+date: 2014-12-11 00:00:00
 author: Joseph Wambaugh 
 isbn-10: 0446548510
 isbn-13: 978-0446548519
