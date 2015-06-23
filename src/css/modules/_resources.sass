@@ -1,0 +1,102 @@
+$resource-size: 360
+$resource-margin: $resource-size / 12
+
+@function resource-cols($num)
+  @return rem((($resource-size * $num) + ($resource-margin * ($num - 1))))
+
+
+.resources
+  display: flex
+  flex-wrap: wrap
+  max-width: resource-cols(1) + 2rem
+  padding: 0 1rem
+  margin: auto
+
+  +bp(resource-cols(2))
+    max-width: resource-cols(2) + 2rem
+
+  +bp(resource-cols(3))
+    max-width: resource-cols(3) + 2rem
+
+  +bp(resource-cols(4))
+    max-width: resource-cols(4) + 2rem
+
+
+.resource
+  position: relative
+  overflow: hidden
+  max-width: rem($resource-size)
+  border: $border
+  padding: rem($resource-margin)
+  border-radius: 0.5em
+  margin-bottom: rem($resource-margin)
+  margin-right: 0
+
+  +bp(resource-cols(2))
+    margin-right: rem($resource-margin)
+    &:nth-child(2n)
+      margin-right: 0
+
+  +bp(resource-cols(3))
+    &:nth-child(2n)
+      margin-right: rem($resource-margin)
+    &:nth-child(3n)
+      margin-right: 0
+
+  +bp(resource-cols(4))
+    &:nth-child(3n)
+      margin-right: rem($resource-margin)
+    &:nth-child(4n)
+      margin-right: 0
+
+
+.resource__header
+  margin: 0 0 0.5em 0
+
+  a:visited
+    color: $orange
+
+
+.resource__timestamp
+  +sans
+  color: $light-gray
+  font-size: 0.75em
+
+.resource__tags
+  +sans 
+  font-size: 0.75em
+
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+  ul li
+    display: inline-block
+
+  ul li a
+    display: block
+    padding: 0 1em
+    line-height: 2em
+    border: none
+    color: $light-gray
+    background: darken($background-color, 5%)
+    border-radius: 1em
+    margin: 0 0.5em 0.5em 0
+
+.resource__permalink
+  position: absolute
+  bottom: 0
+  right: 0
+  width: 2em
+
+  a
+    display: block
+    line-height: 2em
+    text-align: center
+    border: none
+    border-top-left-radius: 0.5em
+    transition: background 0.2s
+
+    &:hover
+      background: $blue
