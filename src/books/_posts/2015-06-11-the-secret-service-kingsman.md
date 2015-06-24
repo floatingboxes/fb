@@ -1,7 +1,7 @@
 ---
 layout: book
 published: true
-title: The Secret Service: Kingsman Paperback
+title: The Secret Service: Kingsman
 date: 2015-06-11 00:00:00
 author: "Mark Millar & Matthew Vaughn"
 illustrator: Dave Gibbons
