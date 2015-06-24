@@ -2,9 +2,21 @@
 layout: base
 title: Web Design Resources
 ---
+<header class="header">
+  <div class="header__icon">
+    {% include svg/icon-resources.svg %}
+  </div>
+  <div class="header__title">
+    <h1>Web Design Resources</h1>
+  </div>
+  <div class="header__links">
+    <ul class="links">
+      <li><a href="/">Home</a></li>
+    </ul>
+  </div>
+</header>
 
-<div class="lo-resources">
-  <h1>Web Design Resources</h1>
+<div class="lo-resources">  
   <section class="filter">
     <form action="" class="filter__form" method="post">
       <input type="text" class="filter__input js-filter-input" placeholder="Type a word here to filter" />
