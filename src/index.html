@@ -26,3 +26,7 @@ title: Dan Sweeney | Web Designer and Co-Founder of Pear Deck
     </ul>
   </div>
 </div>
+
+{% for post in site.posts limit:10 %}
+  <div>{{ post.title }}</div>
+{% endfor %}

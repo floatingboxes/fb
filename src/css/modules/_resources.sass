@@ -5,22 +5,35 @@ $resource-margin: $resource-size / 12
   @return rem((($resource-size * $num) + ($resource-margin * ($num - 1))))
 
 
-.resources
-  display: flex
-  flex-wrap: wrap
-  max-width: resource-cols(1) + 2rem
-  padding: 0 1rem
+.lo-resources
+  max-width: resource-cols(1) + rem($resource-margin*2)
+  padding: 0 rem($resource-margin)
   margin: auto
 
   +bp(resource-cols(2))
-    max-width: resource-cols(2) + 2rem
+    max-width: resource-cols(2) + rem($resource-margin*2)
 
   +bp(resource-cols(3))
-    max-width: resource-cols(3) + 2rem
+    max-width: resource-cols(3) + rem($resource-margin*2)
 
   +bp(resource-cols(4))
-    max-width: resource-cols(4) + 2rem
+    max-width: resource-cols(4) + rem($resource-margin*2)
 
+
+.resources
+  display: flex
+  flex-wrap: wrap
+  position: relative
+  width: resource-cols(1) + rem($resource-margin)
+
+  +bp(resource-cols(2))
+    width: resource-cols(2) + rem($resource-margin)
+
+  +bp(resource-cols(3))
+    width: resource-cols(3) + rem($resource-margin)
+
+  +bp(resource-cols(4))
+    width: resource-cols(4) + rem($resource-margin)
 
 .resource
   position: relative
@@ -29,25 +42,8 @@ $resource-margin: $resource-size / 12
   border: $border
   padding: rem($resource-margin)
   border-radius: 0.5em
+  margin-right: rem($resource-margin)
   margin-bottom: rem($resource-margin)
-  margin-right: 0
-
-  +bp(resource-cols(2))
-    margin-right: rem($resource-margin)
-    &:nth-child(2n)
-      margin-right: 0
-
-  +bp(resource-cols(3))
-    &:nth-child(2n)
-      margin-right: rem($resource-margin)
-    &:nth-child(3n)
-      margin-right: 0
-
-  +bp(resource-cols(4))
-    &:nth-child(3n)
-      margin-right: rem($resource-margin)
-    &:nth-child(4n)
-      margin-right: 0
 
 
 .resource__header
