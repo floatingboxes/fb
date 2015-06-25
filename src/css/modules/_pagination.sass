@@ -1,0 +1,29 @@
+.pagination
+  display: flex
+
+.pagination__previous
+  flex-shrink: 0
+  min-width: 2em
+
+.pagination__home
+  flex-grow: 1
+  text-align: center
+
+.pagination__next
+  flex-shrink: 0
+  min-width: 2em
+
+a.pagination__link,
+.pagination__link
+  border-bottom: none
+  display: block
+  width: 2em
+  height: 2em
+  margin: auto
+
+  svg
+    fill: #CCCCCC
+
+  &:hover
+    svg
+      fill: $orange
