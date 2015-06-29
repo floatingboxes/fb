@@ -2,12 +2,29 @@
 layout: base
 title: Books
 ---
+<div class="lo-books">
+  <header class="header">
+    <div class="header__icon">
+      {% include svg/icon-books.svg %}
+    </div>
+    <div class="header__title">
+      <h1>Books</h1>
+    </div>
+    <div class="header__intro">
+      <p>Some books I've read recently. And some of my favorites.</p>
+    </div>
+    <div class="header__links">
+      <ul class="links">
+        <li><a href="/">Home</a></li>
+      </ul>
+    </div>
+  </header>
 
-<section class="books">
-{% for post in site.categories["books"] %}
-  <article class="book">
-    <img src="/img/books/{{ post.slug }}.jpg" alt="{{ post.title }}">
-    {{ post.title }} - {{ post.author}}
-  </article>
-{% endfor %}
-</section>
+  <section class="books">
+  {% for post in site.categories["books"] %}
+    <article class="book">
+      <a href="{{post.url}}"><img src="/img/books/{{ post.slug }}.jpg" alt="{{ post.title }}"></a>
+    </article>
+  {% endfor %}
+  </section>
+</div>

@@ -1,0 +1,54 @@
+$book-size: 192
+$book-margin: 32
+
+@function book-cols($num)
+  @return rem((($book-size * $num) + ($book-margin * ($num - 1))))
+
+.lo-books
+  max-width: book-cols(4)
+  padding: 0 rem($book-margin)
+  margin: auto
+
+  +bp(book-cols(2))
+    max-width: book-cols(2)
+
+  +bp(book-cols(3))
+    max-width: book-cols(3)
+
+  +bp(book-cols(4))
+    max-width: book-cols(4)
+
+  +bp(book-cols(5))
+    max-width: book-cols(5)
+
+  +bp(book-cols(6))
+    max-width: book-cols(6)
+
+  +bp(book-cols(7))
+    max-width: book-cols(7)
+
+  +bp(book-cols(8))
+    max-width: book-cols(8)
+
+
+
+.books
+  display: flex
+  flex-wrap: wrap
+  position: relative
+  width: 100%
+
+.book
+  position: relative
+  overflow: hidden
+  max-width: rem($book-size)
+  border-bottom: $border
+  padding: rem($book-margin) rem($book-margin) 0
+  margin-bottom: rem($book-margin*2)
+
+  display: flex
+  align-items: flex-end
+
+  img
+    display: block
+    box-shadow: 0px -2px 4px rgba(0,0,0,0.35)
