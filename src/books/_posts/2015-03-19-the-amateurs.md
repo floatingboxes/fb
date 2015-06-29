@@ -1,6 +1,7 @@
 ---
 layout: book
 published: true
+slug: the-amateurs
 title: The Amateurs
 date: 2015-03-19 00:00:00
 author: Conor Stechshulte

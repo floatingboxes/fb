@@ -1,6 +1,7 @@
 ---
 layout: book
 published: true
+slug: the-sculptor
 title: The Sculptor
 date: 2015-06-18 00:00:00
 author: Scott McCloud

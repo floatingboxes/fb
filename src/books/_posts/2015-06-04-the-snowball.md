@@ -1,7 +1,8 @@
 ---
 layout: book
 published: true
-title: The Snowball: Warren Buffett and the Business of Life
+slug: the-snowball
+title: "The Snowball: Warren Buffett and the Business of Life"
 date: 2015-06-04 00:00:00
 author: Alice Schroeder
 isbn-10: 0553384619

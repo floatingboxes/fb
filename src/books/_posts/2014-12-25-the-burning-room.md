@@ -1,6 +1,7 @@
 ---
 layout: book
 published: true
+slug: the-burning-room
 title: The Burning Room
 date: 2014-12-25 00:00:00
 author: Michael Connelly
@@ -9,4 +10,3 @@ isbn-13: 978-1455524198
 url: http://www.amazon.com/Burning-Room-Harry-Bosch/dp/1455524190/ref=sr_1_1?s=books&ie=UTF8&qid=1434744962&sr=1-1&keywords=burning+room
 rating: 3
 ---
-

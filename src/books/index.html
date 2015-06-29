@@ -6,10 +6,8 @@ title: Books
 <section class="books">
 {% for post in site.categories["books"] %}
   <article class="book">
-    <img src="/img/books/" alt="">
+    <img src="/img/books/{{ post.slug }}.jpg" alt="{{ post.title }}">
     {{ post.title }} - {{ post.author}}
-
-    {{ post.id }}
   </article>
 {% endfor %}
 </section>
