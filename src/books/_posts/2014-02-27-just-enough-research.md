@@ -7,6 +7,6 @@ date: 2014-02-27 00:00:00
 author: Erika Hall
 isbn-10: 1937557103
 isbn-13: 978-1937557102
-url: http://abookapart.com/products/just-enough-research
+amazon-url: http://abookapart.com/products/just-enough-research
 rating: 4
 ---

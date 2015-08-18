@@ -23,7 +23,7 @@ title: Books
   <section class="books">
   {% for post in site.categories["books"] %}
     <article class="book">
-      <a href="{{post.url}}"><img src="/img/books/{{ post.slug }}.jpg" alt="{{ post.title }}"></a>
+      <a href="{{post.amazon-url}}"><img src="/img/books/{{ post.slug }}.jpg" alt="{{ post.title }}"></a>
     </article>
   {% endfor %}
   </section>
