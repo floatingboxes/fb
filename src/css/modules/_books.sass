@@ -1,11 +1,16 @@
-$book-size: 192
-$book-margin: 32
+$book-size: 200
+$book-margin: 30
 
 @function book-cols($num)
-  @return rem((($book-size * $num) + ($book-margin * ($num - 1))))
+  @return rem(($book-size * $num) + ($book-margin * 2))
+/*
+  || 30 || 30 |   140  | 30 || 30 || = 260
+  || 30 || 30 |   140  | 30 | 30 |   140  | 30 || 30 || = 460
+  || 30 || 30 |   140  | 30 | 30 |   140  | 30 | 30 |   140  | 30 || 30 || = 660
+
 
 .lo-books
-  max-width: book-cols(4)
+  max-width: book-cols(1)
   padding: 0 rem($book-margin)
   margin: auto
 
@@ -51,4 +56,14 @@ $book-margin: 32
 
   img
     display: block
+    outline: none
     box-shadow: 0px -2px 4px rgba(0,0,0,0.35)
+
+    transform-origin: bottom center
+    transition: all 0.2s
+
+    &:hover
+      transform: scale(1.1)
+
+  a
+    border: none
