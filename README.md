@@ -10,3 +10,8 @@ Yeah, yeah.
  - The `package.json` lets you `npm install` all of the nice bits like [Grunt](http://gruntjs.com/) and [Autoprefixer](https://github.com/ai/autoprefixer).
 
 So to get started first run `bundle install` then `npm install` then `grunt dev` to work locally.
+
+## Credits
+
+ - [Resources Icon by Scott Lewis from the Noun Project](https://thenounproject.com/search/?q=design&i=9350)
+ - [Book Icon by Ahmed Hamzawy from the Noun Project](https://thenounproject.com/search/?q=book&i=1606)
