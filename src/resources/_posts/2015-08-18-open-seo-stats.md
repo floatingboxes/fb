@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: resource
 published: true
 date: 2015-08-18 21:17:55
 title: Open SEO Stats
