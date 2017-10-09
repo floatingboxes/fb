@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Floatingboxes' Resources</title>
+		<description>A list of links brought to you by Dan Sweeney, available on github.</description>
+		<link>http://floatingboxes.com/resources</link>
+		<atom:link href="http://floatingboxes.com/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Good Web Design</title>
+				<description>&lt;p&gt;Curated and tagged landing page inspiration.&lt;/p&gt;
+</description>
+				<pubDate>Sun, 24 Sep 2017 11:42:00 -0500</pubDate>
+				<link>http://floatingboxes.com/resources/2017/09/24/good-web-design.html</link>
+				<guid isPermaLink="true">http://floatingboxes.com/resources/2017/09/24/good-web-design.html</guid>
+			</item>
+		
+			<item>
+				<title>Ambiance.</title>
+				<description>&lt;p&gt;“Ambiance. generates beautiful color palettes so that you use them on that awesome Illustration, on that really fancy and modern User Interface or just stare at them in peace.”&lt;/p&gt;
+</description>
+				<pubDate>Tue, 23 May 2017 11:18:01 -0500</pubDate>
+				<link>http://floatingboxes.com/resources/2017/05/23/ambiance.html</link>
+				<guid isPermaLink="true">http://floatingboxes.com/resources/2017/05/23/ambiance.html</guid>
+			</item>
+		
+			<item>
+				<title>Color Farm</title>
+				<description>&lt;p&gt;Daily color inspiration picked from popular Dribbble shots.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 28 Nov 2016 04:58:08 -0600</pubDate>
+				<link>http://floatingboxes.com/resources/2016/11/28/color-farm.html</link>
+				<guid isPermaLink="true">http://floatingboxes.com/resources/2016/11/28/color-farm.html</guid>
+			</item>
+		
+			<item>
+				<title>httpster</title>
+				<description>&lt;p&gt;Httpster is an inspiration resource and showcase of “totally rocking” websites made by people from all over the world.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 28 Nov 2016 04:56:38 -0600</pubDate>
+				<link>http://floatingboxes.com/resources/2016/11/28/httpster.html</link>
+				<guid isPermaLink="true">http://floatingboxes.com/resources/2016/11/28/httpster.html</guid>
+			</item>
+		
+			<item>
+				<title>Forestry.io</title>
+				<description>&lt;p&gt;A simple CMS for Jekyll and Hugo sites; integrates with GitHub, Gitlab and Bitbucket.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 21 Oct 2016 02:57:39 -0500</pubDate>
+				<link>http://floatingboxes.com/resources/2016/10/21/forestry-io.html</link>
+				<guid isPermaLink="true">http://floatingboxes.com/resources/2016/10/21/forestry-io.html</guid>
+			</item>
+		
+			<item>
+				<title>HEAD</title>
+				<description>&lt;p&gt;A list of everything that could go in the &amp;lt;head&amp;gt; of your document.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 30 May 2016 09:43:43 -0500</pubDate>
+				<link>http://floatingboxes.com/resources/2016/05/30/head.html</link>
+				<guid isPermaLink="true">http://floatingboxes.com/resources/2016/05/30/head.html</guid>
+			</item>
+		
+			<item>
+				<title>Contentful</title>
+				<description>&lt;p&gt;A headless CMS with an API at its core.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 16 May 2016 03:21:28 -0500</pubDate>
+				<link>http://floatingboxes.com/resources/2016/05/16/contentful.html</link>
+				<guid isPermaLink="true">http://floatingboxes.com/resources/2016/05/16/contentful.html</guid>
+			</item>
+		
+			<item>
+				<title>Modaal</title>
+				<description>&lt;p&gt;A WCAG 2.0 Level AA accessible modal window plugin with customizable CSS/SASS options.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 09 May 2016 04:14:53 -0500</pubDate>
+				<link>http://floatingboxes.com/resources/2016/05/09/modaal.html</link>
+				<guid isPermaLink="true">http://floatingboxes.com/resources/2016/05/09/modaal.html</guid>
+			</item>
+		
+			<item>
+				<title>Runner</title>
+				<description>&lt;p&gt;Alfred-like interface for Sketch to run commands and navigate the interface directly for the keyboard.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 09 May 2016 04:12:37 -0500</pubDate>
+				<link>http://floatingboxes.com/resources/2016/05/09/sketch-runner.html</link>
+				<guid isPermaLink="true">http://floatingboxes.com/resources/2016/05/09/sketch-runner.html</guid>
+			</item>
+		
+			<item>
+				<title>Bootstrap 4 Cheat Sheet</title>
+				<description>&lt;p&gt;Quick reference for Bootstrap 4. For those rare instances where I encounter it.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 09 May 2016 04:10:22 -0500</pubDate>
+				<link>http://floatingboxes.com/resources/2016/05/09/bootstrap-4-cheat-sheet.html</link>
+				<guid isPermaLink="true">http://floatingboxes.com/resources/2016/05/09/bootstrap-4-cheat-sheet.html</guid>
+			</item>
+		
+	</channel>
+</rss>
